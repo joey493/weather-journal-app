@@ -1,0 +1,173 @@
+/* import font */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+/* import font */
+
+/* global */
+* {
+  box-sizing: border-box;
+}
+:root {
+  --textColor: #426696;
+  --white: #fff;
+}
+/* global */
+
+/* body style */
+body {
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+/* body style */
+
+/* app container style */
+#app {
+  background: var(--white);
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  z-index: 2;
+  backdrop-filter: blur(2rem);
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  width: 600px;
+  padding: 30px 40px;
+}
+/* app container style */
+
+/* header style */
+h2 {
+  text-align: center;
+  margin: 0 0 20px;
+  color: var(--textColor);
+}
+/* header style */
+
+/* holder style */
+.holder {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+/* lable style */
+.holder label {
+  color: #5b5b5b;
+  display: block;
+  margin-bottom: 5px;
+}
+/* lable style */
+
+/* input & entryHolder style */
+.holder input,
+.holder textarea,
+.entryHolder {
+  background: linear-gradient(
+    to left top,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.5)
+  );
+  color: var(--textColor);
+  border: none;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+}
+/* input & entryHolder style */
+
+/* input style onFocus */
+.holder input:focus,
+.holder textarea:focus {
+  border: solid var(--white) 1px;
+  outline: 0;
+  border-color: #2ecc71;
+}
+/* input style onFocus */
+
+/* entry text style */
+.holder .entry {
+  color: #658ec6;
+}
+/* entry text style */
+/* holder style */
+
+/* icons style */
+h2 i:first-of-type {
+  padding: 0 5px 0 0;
+}
+h2 i:last-of-type {
+  padding: 0 0 0 5px;
+}
+.holder i {
+  color: var(--textColor);
+  padding: 0 5px 0 0;
+}
+/* icons style */
+
+/* generate button style */
+#generate {
+  cursor: pointer;
+  background-color: #3498db;
+  border: 2px solid #3498db;
+  border-radius: 4px;
+  color: var(--white);
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* circles style */
+.circle1,
+.circle2 {
+  background: var(--white);
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.3)
+  );
+  height: 10rem;
+  width: 10rem;
+  position: absolute;
+  border-radius: 50%;
+  animation: rotate 5s linear 0s infinite forwards reverse;
+}
+
+.circle1 {
+  top: 5%;
+  right: 15%;
+}
+.circle2 {
+  bottom: 5%;
+  left: 10%;
+}
+/* circles style */
+
+/* animation */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg) translate(-1em) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translate(-1em) rotate(-360deg);
+  }
+}
+/* animation */
+
+/*Responsive*/
+@media (max-width: 388px) {
+  #app h2 {
+    font-size: 1.17em;
+  }
+}
+/*Responsive*/
